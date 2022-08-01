@@ -1,0 +1,34 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "update pnpm",
+      "command": "npm install -g pnpm --force"
+    },
+    {
+      "name": "Install Dependencies",
+      "command": "pnpm install"
+    },
+    {
+      "name": "Run Postgresql",
+      "command": "docker-compose up -d"
+    }
+  ],
+  "tasks": {
+    "seed-db": {
+      "name": "Seed db",
+      "command": "curl -L http://cube.dev/downloads/ecom-dump.sql --create-dirs  > db/ecom-dump.sql && docker exec db psql -U postgres public < /opt/ecom-dump.sql",
+      "runAtStart": true
+    },
+    "dev:cube-server": {
+      "name": "Cubejs Server",
+      "command": "pnpm dev:cubejs-server",
+      "runAtStart": true
+    },
+    "dev:dashboard-app": {
+      "name": "Dashboard App",
+      "command": "pnpm dev:dashboard-app",
+      "runAtStart": true
+    }
+  }
+}
