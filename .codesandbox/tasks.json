@@ -17,7 +17,7 @@
   "tasks": {
     "seed-db": {
       "name": "Seed db",
-      "command": "curl -L http://cube.dev/downloads/ecom-dump.sql --create-dirs  > db/ecom-dump.sql && docker exec db psql -U postgres public < /opt/ecom-dump.sql",
+      "command": "curl -L http://cube.dev/downloads/ecom-dump.sql --create-dirs  > db/ecom-dump.sql && docker exec db sh -c 'psql -U postgres public < /opt/ecom-dump.sql'",
       "runAtStart": true
     },
     "dev:cube-server": {
