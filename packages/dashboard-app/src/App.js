@@ -10,10 +10,10 @@ import client from "./graphql/client";
 import Header from './components/Header';
 // import aws_exports from './aws-exports';
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDY1OTA0NjEsImV4cCI6MTkyMjE2NjQ2MX0.DdY7GaiHsQWyTH_xkslHb17Cbc3yLFfMFwoEpx89JiA'
+const token = process.env.REACT_APP_CUBEJS_TOKEN
 
 const cubejsApi = cubejs(token, {
-  apiUrl: 'https://harsh-eel.aws-us-east-2.cubecloudapp.dev/cubejs-api/v1'
+  apiUrl: process.env.REACT_APP_API_URL
 });
 
 // Amplify.configure(aws_exports);

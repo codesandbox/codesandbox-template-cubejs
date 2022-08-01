@@ -3,10 +3,7 @@ lockfileVersion: 5.4
 importers:
 
   .:
-    specifiers:
-      react-intersection-observer: ^9.3.5
-    dependencies:
-      react-intersection-observer: 9.4.0
+    specifiers: {}
 
   packages/cubejs-server:
     specifiers:
@@ -17835,12 +17832,6 @@ packages:
     transitivePeerDependencies:
       - react
       - react-dom
-    dev: false
-
-  /react-intersection-observer/9.4.0:
-    resolution: {integrity: sha512-v0403CmomOVlzhqFXlzOxg0ziLcVq8mfbP0AwAcEQWgZmR2OulOT79Ikznw4UlB3N+jlUYqLMe4SDHUOyp0t2A==}
-    peerDependencies:
-      react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
     dev: false
 
   /react-is/16.13.1:
