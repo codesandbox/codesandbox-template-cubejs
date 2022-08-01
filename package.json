@@ -1,16 +1,13 @@
 {
-    "name": "codesandbox-template-cubejs",
-    "private": true,
-    "version": "1.0.0",
-    "description": "CodeSandbox template for Cube.js",
-    "workspaces": [
-      "packages/*"
-    ],
-    "scripts": {
-      "dev:dashboard-app": "pnpm --filter dashboard-app start",
-      "dev:cubejs-server": "pnpm --filter cubejs-server dev"
-    },
-    "dependencies": {
-      "react-intersection-observer": "^9.3.5"
-    }
+  "name": "codesandbox-template-cubejs",
+  "private": true,
+  "version": "1.0.0",
+  "description": "CodeSandbox template for Cube.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:dashboard-app": "pnpm --filter dashboard-app start",
+    "dev:cubejs-server": "pnpm --filter react-dashboard-demo dev"
   }
+}
