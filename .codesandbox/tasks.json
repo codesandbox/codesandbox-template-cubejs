@@ -12,14 +12,13 @@
     {
       "name": "Run Postgresql",
       "command": "docker-compose up -d"
+    },
+    {
+      "name": "Seed db",
+      "command": "curl -L http://cube.dev/downloads/ecom-dump.sql --create-dirs  > db/ecom-dump.sql && docker exec db sh -c 'psql -U postgres public < /opt/ecom-dump.sql'"
     }
   ],
   "tasks": {
-    "seed-db": {
-      "name": "Seed db",
-      "command": "curl -L http://cube.dev/downloads/ecom-dump.sql --create-dirs  > db/ecom-dump.sql && docker exec db sh -c 'psql -U postgres public < /opt/ecom-dump.sql'",
-      "runAtStart": true
-    },
     "dev:cube-server": {
       "name": "Cubejs Server",
       "command": "pnpm dev:cubejs-server",
