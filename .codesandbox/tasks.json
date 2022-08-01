@@ -1,0 +1,37 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    // {
+    //   "name": "check npmrc",
+    //   "command": "node --version && npm --version && pnpm --version && cat ~/.npmrc"
+    // },
+    // {
+    //   "name": "temp npmrc",
+    //   "command": "echo 'auto-install-peers=true' >> ~/.npmrc"
+    // },
+    {
+      "name": "update pnpm",
+      "command": "npm install -g pnpm --force"
+    },
+    {
+      "name": "Install Dependencies",
+      "command": "pnpm install"
+    }
+    // {
+    //   "name": "Build theme",
+    //   "command": "pnpm build:theme"
+    // }
+  ],
+  "tasks": {
+    "dev:cube-server": {
+      "name": "Cubejs Server",
+      "command": "pnpm dev:cubejs-server",
+      "runAtStart": true
+    },
+    "dev:dashboard-app": {
+      "name": "Dashboard App",
+      "command": "pnpm dev:dashboard-app",
+      "runAtStart": true
+    }
+  }
+}
